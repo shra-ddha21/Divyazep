@@ -1,0 +1,348 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    height: 100vh;
+    margin-top: 45px;
+    color: #000000;
+    font-size: large;
+    background-color:white;
+    /* background: url('https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1517&q=80'); */
+    /* background: url(background.jpg); */
+
+    background-size: cover;
+    background-position: center;
+    
+
+}
+li{
+    list-style: none;
+
+}
+a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+
+}
+a:hover{
+    color: orange;
+
+}
+
+/*Header*/
+
+header {
+    position: relative;
+    padding: 0 2rem;
+
+}
+
+.navbar {
+    width: 100%;
+    height: fit-content;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a {
+    font-size: 1.7rem;
+    font-weight: bold;
+
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  main {
+    flex: 1;
+  }
+ 
+
+.navbar .links{
+    display: flex;
+    gap: 5px;
+    font-size: 40px;
+}
+
+.navbar .toggle_btn {
+    color: #0a0a0a;
+    font-size: 2.3rem;
+    cursor: pointer;
+    display: none;
+}
+/* giving style to the tabs */
+ul.links a{
+    background-color: #054fb9;
+    color: white;
+    padding: 0.5rem 1rem;
+    border:none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 15px;
+}
+ul.links a:hover{
+    background-color: rgb(95, 215, 255);
+    color: #054fb9;
+    scale: 1.5;
+    transition: scale 0.2 ease;
+}
+.action_btn a:hover{
+    color: black;
+    
+}
+.action_btn{
+    background-color: rgb(158, 235, 252);
+    color: black;
+    padding: 0.5rem 1rem;
+    border:none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+    width: 300px;
+    margin-left: 65%;
+    text-align: center;
+    height: 40px;
+    
+}
+.action_btn a{
+    font-size: 15px;
+}
+.action_btn:hover {
+    scale: 1.05;
+    color: #000000;
+}
+
+.action_btn:active{
+    scale: 0.95;
+    color: #000000;
+}
+
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter:blur(15px);
+    border-radius: 10px;
+    overflow:hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open{
+    height: 240px;
+}
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.dropdown_menu .action_btn{
+    width:100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+section#hero {
+    /* height: calc(100vh - 30px); */
+    height:fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    text-align: left;
+    color: #000000;
+}
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+/*responsiveness */
+
+@media(max-width: 992px) {
+    .navbar .links,
+    .navbar .action_btn{
+        display: none;
+    }
+    .navbar .toggle_btn{
+        display: block;
+    }
+
+    .dropdown_menu{
+        display: block;
+        background-color: #b3c7f7;
+        position: absolute;
+        z-index: 999;
+    }
+}
+
+@media(max-width: 576px){
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+        
+    }
+    .action_btn{
+        background-color: orange;
+        color: black;
+        padding: 0.5rem 1rem;
+        border:none;
+        outline: none;
+        border-radius: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: scale 0.2 ease;
+        width: 300px;
+        margin-left: 70%;
+        text-align: center;
+        height: 40px;
+    }
+}
+
+/*Body */
+
+.media-icons a i {
+    height: 55px;
+    width: 20px;
+    color: orange;
+  }
+  
+  .media-icons a i:before {
+    color: rgb(0, 0, 0);
+  }
+  
+
+/* email */
+
+#email {
+    color: red;
+    font-size: 18px;
+  }
+
+section{
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+hr {
+    height: 2.5px; /* adjust to your desired height */
+    width: 100%; /* adjust to your desired width */
+    border: none;
+    background-color: rgba(130, 226, 255, 0.87); /* or any other color you prefer */
+  }
+ul.cls li {
+    width: max;
+    background-color: rgb(118, 188, 229);
+    color: black;
+    text-align: center;
+    border-radius: 15px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  
+  ul.cls li:last-child {
+    margin-right: 0;
+  }
+  
+  @media (max-width: 992px) {
+    ul.cls li {
+      width: 100%;
+      margin-right: 0;
+    }
+    .action_btn{
+        width: 150px;
+        align-self: auto;
+    }
+  }
+
+  ul.cls #artlist{
+    font-size: 20px;
+    color: black;
+    
+  }
+  ul.cls #comlist{
+    font-size: 20px;
+    color: black;
+  }
+  ul.cls #scilist{
+    font-size: 20px;
+    color: black;
+  }
+
+  section p{
+    text-align: justify;
+  }
+
+
+
+
+
+body { background:rgb(255, 255, 255); }
+
+
+
+.feedback-input {
+  color:black black;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid #2F7EDF;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:80%;
+  outline:0;
+}
+
+.feedback-input:focus { border:2px solid #064087; }
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
+}
+
+[type="submit"] {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  width: 80%;
+  background:#2F7EDF;
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+[type="submit"]:hover { background:#064087; }
